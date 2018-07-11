@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Guess Number!</title>
+        <style>
+            @import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+            * {
+                font-family: 'Noto Sans TC';
+            }
+            .game{
+                width: 600px;
+                margin: 100px auto;
+                border: 1px grey solid;
+                border-radius: 10px;
+                text-align: center;
+            }
+            #gift{
+                width:200px;
+                height: 200px;
+                margin: auto;
+                padding: 20px;
+            }
+            #num{
+                font-size: 40px;
+                width:70px;
+                height:70px;
+                margin: auto;
+                text-align: center;
+            }
+        </style>
+
+    </head>
+
+    <body>
+
+        <div class="game">
+            <h1>猜數字遊戲</h1>
+            <p>現在已經生成一個1~100的數字<br>快來猜猜看~<br>猜中有獎品喔!!</p>
+            <input type="text" id="num" value="0"><br><br>
+            <input type="button" id="bt" value="確定">
+            <br><br>
+            <h3 id="result"></h3>
+            <div id='gift'><img src="running.png" alt="開始" width=200></div>
+        </div>
+        <script>
+
+            var random=parseInt(Math.random()*100+1);
+            console.log(random);
+            var onum=document.getElementById("num");
+            var obt=document.getElementById("bt");
+            var oresult=document.getElementById("result");
+            var ogift=document.getElementById("gift");
+            obt.onclick=function(){
+                var num=Number(onum.value);
+                if(num<random){
+                    oresult.innerHTML="太小囉!!再給你一次機會吧~~";
+                    onum.style.color="red";
+                    ogift.innerHTML="<img src='hand.png' alt='再一次' width=200>";
+
+                }else if(num>random){
+                    oresult.innerHTML="太大囉!!再試一次吧";
+                    onum.style.color="red";
+                    ogift.innerHTML="<img src='sad.png' alt='再一次' width=200>";
+                }else{
+                    onum.style.color="blue";
+                    oresult.innerHTML="恭喜你中獎了!!!<br>趕快點擊下方的禮物吧!!<br><br>";
+                    ogift.innerHTML="<img src='gift.png' alt='禮物' width=200>";
+                }
+            }
+
+            ogift.onclick=function(){
+                oresult.innerHTML="恭喜你中獎了!!!<br>趕快點擊下方的禮物吧!!<br>可愛的法鬥給你看!!<br><br>";
+                ogift.innerHTML="<img src='bulldog-christmas-dog-3884.jpg' alt='法鬥' width=200>";
+            }
+        </script>
+    </body>
+</html>
