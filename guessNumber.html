@@ -27,6 +27,17 @@
                 margin: auto;
                 text-align: center;
             }
+            #bt{
+                font-size: 20px;
+                background-color: cornflowerblue;
+                color: #fff;
+                width: 70px;
+                margin: auto;
+                border: none;
+            }
+            #bt:hover{
+                background-color: deeppink;
+            }
         </style>
 
     </head>
@@ -36,7 +47,7 @@
         <div class="game">
             <h1>猜數字遊戲</h1>
             <p>現在已經生成一個1~100的數字<br>快來猜猜看~<br>猜中有獎品喔!!</p>
-            <input type="text" id="num" value="0"><br><br>
+            <input type="text" id="num" placeholder="0"><br><br>
             <input type="button" id="bt" value="確定">
             <br><br>
             <h3 id="result"></h3>
@@ -45,6 +56,7 @@
         <script>
 
             var random=parseInt(Math.random()*100+1);
+            console.log(random);
             var onum=document.getElementById("num");
             var obt=document.getElementById("bt");
             var oresult=document.getElementById("result");
