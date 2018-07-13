@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Galada|PT+Sans" rel="stylesheet">
+        <title>AutoTable</title>
+    </head>
+
+    <body>
+
+        <div class="title">
+            <h1 class="logo">AutoTable</h1>
+        </div>
+
+        <div class="autoT">
+            <br><br><h2>自動生成表格小幫手</h2><br>
+            <label for="r">請輸入列的個數:</label>
+            <input type="text" id="r" placeholder="1"><br><br>
+            <label for="c">請輸入欄的個數:</label>
+            <input type="text" id="c" placeholder="1"><br><br>
+            <input type="button" id="bt" value="確定"><br><br>
+
+            <div id="ta">   
+                <img src="spreadsheet.png" alt="表格" width="300">
+            </div>
+            <br><br><input type="hidden" id='bt2' value="完成">
+        </div>
+        <script>
+            var ot=document.getElementById("r"); 
+            var oc=document.getElementById("c");
+            var obt=document.getElementById("bt");
+            var obt2=document.getElementById("bt2");
+            obt.onclick=function(){
+                var otn=Number(ot.value);
+                var ocn=Number(oc.value);
+                var ota=document.getElementById("ta");
+                var otable="<table align='center'>";
+                otable=otable+"<tr><td class='top'></td>";
+                for(var k=1;k<=ocn;k++){
+                    otable=otable+"<td class='top'>"+k+"</td>";
+                }
+                otable=otable+"</tr>";
+                for(var i=1;i<=otn;i++){
+                    otable=otable+"<tr>";
+                    otable=otable+"<td class='top'>"+i+"</td>";
+                    for(var j=1;j<=ocn;j++){
+                        otable=otable+"<td id='con"+i+j+"'><input type='text' class='tacon' id='coninput"+i+j+"'></td>";
+                    }
+                    otable=otable+"</tr>";
+                }
+                otable=otable+"</table><br>";
+                ota.innerHTML=otable;
+                ota.style.border="1px #999 solid";
+                ota.style.overflow="auto";
+                ota.style.margin="auto";
+                ota.style.minHeight="400px";
+                ota.style.backgroundColor="#FFF";
+                obt2.type="button";
+            }
+            var ocon,ocid,ocon2,ocid2="";
+            obt2.onclick=function(){
+                var otn=Number(ot.value);
+                var ocn=Number(oc.value);
+                for(var i=1;i<=otn;i++){
+                    for(var j=1;j<=ocn;j++){
+                        ocid="con"+i+j;
+                        ocid2="coninput"+i+j;
+                        ocon=document.getElementById(ocid);
+                        ocon2=document.getElementById(ocid2);
+                        ocon.innerHTML=ocon2.value;
+
+                    }
+
+                }
+                obt2.type="hidden";
+            }
+
+        </script>
+    </body>
+</html>
