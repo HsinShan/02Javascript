@@ -1,0 +1,154 @@
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+body{
+    font-family: 'Noto Sans TC';
+    margin: 0px;
+    background-color: #FFFFB9;
+}
+.content{
+    width: 98%;
+    margin: auto;
+    
+}
+
+.title{
+    margin: 0;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    background: #FFF;
+}
+.title h1{
+    margin: 0;
+    margin-bottom: 20px;
+    padding-left: 60px;
+    background: url(catcher.png) no-repeat 20px;
+    display: inline;
+}
+.title a{
+    width:80px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #FFC25B;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    position: absolute;
+    right: 5px;
+    margin: 15px 20px;
+    color: #000;
+    font-size: 20px;
+    text-align: center;
+}
+.title a:hover{
+    background-color: #FF8497;
+    color: #FFF;
+}
+.info{
+    border: 1px #FFF solid;
+    padding: 10px 20px;
+}
+.info h2{
+    text-align: center;
+}
+.menu{
+    width: 300px;
+    height: 100%;
+    border: 1px #FFF solid;
+    float: left;
+    margin-top:20px;
+    display: inline;
+    background-color: #FFC25B;
+}
+.menu h3{
+    margin: 0;
+    padding-left: 30px;
+    border: 1px #FFF solid;
+    background: url(right-arrow.png) no-repeat 10px center;
+    height: 40px;
+    line-height: 40px;
+}
+.menu ul{
+    margin: 0;
+    padding: 0;
+    border: 1px #FFF solid;
+    display: none;
+}
+.menu ul li{
+    margin: 0;
+    border: 1px #FFF solid;
+    padding-left: 50px;
+    min-height: 30px;
+    line-height: 30px;
+
+}
+li{
+    list-style: none;
+}
+.latest{
+    margin: 0;
+    padding: 0;
+    width: 1000px;
+    position: absolute;
+    margin-left: 0px;
+    display: inline;
+   
+
+}
+.latest h1{
+    margin: 0;
+    margin-top: 10px;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+}
+.news{
+    margin: 20px 100px;
+    width:800px;
+    height: 526px;
+}
+.news img{
+    width:800px;
+    height: 526px;
+
+}
+.news h1{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 55px;
+    background: #999;
+    opacity: 0.8;
+    color: #FFF;
+    width: 800px;
+    text-align: center;
+    height: 100px;
+    line-height: 100px;
+}
+.active{
+    background-color: #FF8497;
+    color: #FFF;
+}
+#pre{
+    width:27px;
+    height: 25px;
+    background: url(previous.png) no-repeat center;
+    border: none;
+}
+#next{
+    width:27px;
+    height: 25px;
+    background: url(skip.png) no-repeat center;
+    border: none;
+}
+.num p{
+    font-size: 20px;
+    height:35px;
+    line-height: 35px;
+    display: inline;
+    padding: 10px;
+}
+.num{
+    width:200px;
+    height: 35px;
+    margin: auto;
+}
