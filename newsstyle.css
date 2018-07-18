@@ -53,7 +53,7 @@ body{
 }
 .menu{
     width: 300px;
-    min-height: 600px;
+    min-height: 650px;
     border: 1px #FFF solid;
     float: left;
     margin-top:20px;
@@ -134,18 +134,21 @@ li{
     height: 25px;
     background: url(previous.png) no-repeat center;
     border: none;
+    cursor: pointer;
 }
 #next{
     width:27px;
     height: 25px;
     background: url(skip.png) no-repeat center;
     border: none;
+    cursor: pointer;
 }
 
 .num{
     width:200px;
     height: 35px;
     margin: auto;
+    padding-bottom: 5px;
 }
 .num div{
     font-size: 20px;
@@ -153,10 +156,11 @@ li{
     height:35px;
     line-height: 35px;
     padding: 0 5px;
+    margin-bottom: 10px;
     background-color: #FFF;
     border-radius: 5px;
     display: inline;
-
+    cursor: pointer;
 
 }
 .active1{
