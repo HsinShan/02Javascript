@@ -7,7 +7,7 @@ body{
 .content{
     width: 98%;
     margin: auto;
-    
+
 }
 
 .title{
@@ -92,7 +92,7 @@ li{
     position: absolute;
     margin-left: 0px;
     display: inline;
-   
+
 
 }
 .latest h1{
@@ -141,15 +141,25 @@ li{
     background: url(skip.png) no-repeat center;
     border: none;
 }
-.num p{
-    font-size: 20px;
-    height:35px;
-    line-height: 35px;
-    display: inline;
-    padding: 10px;
-}
+
 .num{
     width:200px;
     height: 35px;
     margin: auto;
+}
+.num div{
+    font-size: 20px;
+    width: 35px;
+    height:35px;
+    line-height: 35px;
+    padding: 0 5px;
+    background-color: #FFF;
+    border-radius: 5px;
+    display: inline;
+
+
+}
+.active1{
+    color: #FF8497;
+
 }
