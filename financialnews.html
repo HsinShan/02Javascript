@@ -15,7 +15,7 @@
         </div>
         <div class="content">
             <div class="menu">
-               
+
                 <div class="section">
                     <h3>點擊排行</h3>
                     <ul>
@@ -62,7 +62,7 @@
                 <div class="info">
                     <h2>網站資訊</h2>
                     <p>請按下右上角的+關注，即可進入我的Blog--Growing Crab中的FinNews頁面,在頁面中會有排行榜中各則新聞的詳細資訊及見解!!</p>
-                    
+
                 </div>
             </div>
             <div class="latest">
@@ -73,12 +73,19 @@
                 </div>
                 <div class="num">
                     <input type="button" id="pre" >
-                    <p id="pag"></p>
+
+                    <div class="active1">1</div>
+                    <div>2</div>
+                    <div>3</div>
+
+
                     <input type="button" id="next">
+
                 </div>
             </div>
-
         </div>
+
+
         <script>
             var osec=document.getElementsByClassName("section");
             for(var i=0;i<osec.length;i++){
@@ -105,70 +112,69 @@
             var odesc=document.getElementById("desc");
             var opre=document.getElementById("pre");
             var onext=document.getElementById("next");
-            var opag=document.getElementById("pag");
+            var onum=document.getElementsByClassName("num")[0];
+            var opag=onum.getElementsByTagName("div");
             var page=1;//紀錄頁數
-            opag.innerHTML="第1頁/共3頁";
-                   
+
+
             opre.onclick=function(){
+                opag[page-1].className="";
                 if(page!=1){
                     page-=1;
                 }else{
                     page=3;
                 }
-                console.log(page);
+                opag[page-1].className="active1";
                 switch(page){
                     case 1:
                         ola.src="1-wtc-america-architecture-374710.jpg";
                         ola.alt="華爾街";
                         odesc.innerHTML="Netflix財報結果低於預期 美股漲跌不一";
-                        opag.innerHTML="第1頁/共3頁";
-                    break;
+                        break;
                     case 2:
                         ola.src="airport-bank-board-534216.jpg";
                         ola.alt="股市";
                         odesc.innerHTML="倫敦股市分析";
                         opag.innerHTML="第2頁/共3頁";
-                    break;
+                        break;
                     case 3:
                         ola.src="administration-articles-bank-261949.jpg";
                         ola.alt="經濟";
                         odesc.innerHTML="雙普會今日登場 影響力有限";
                         opag.innerHTML="第3頁/共3頁";
-                    break; 
+                        break; 
                 }
             }
-            
+
             onext.onclick=function(){
+                opag[page-1].className="";
                 if(page!=3){
                     page+=1;
                 }else{
                     page=1;
                 }
-                console.log(page);
-                 switch(page){
+                opag[page-1].className="active1";
+                switch(page){
                     case 1:
                         ola.src="1-wtc-america-architecture-374710.jpg";
                         ola.alt="華爾街";
                         odesc.innerHTML="Netflix財報結果低於預期 美股漲跌不一";
-                        opag.innerHTML="第1頁/共3頁";
-                    break;
+                        break;
                     case 2:
                         ola.src="airport-bank-board-534216.jpg";
                         ola.alt="股市";
                         odesc.innerHTML="倫敦股市分析";
-                        opag.innerHTML="第2頁/共3頁";
-                    break;
+                        break;
                     case 3:
                         ola.src="administration-articles-bank-261949.jpg";
                         ola.alt="經濟";
                         odesc.innerHTML="雙普會今日登場 影響力有限";
-                        opag.innerHTML="第3頁/共3頁";
-                    break; 
+                        break; 
                 }
             }
-        
-            
-            
+
+
+
         </script>
     </body>
 </html>
