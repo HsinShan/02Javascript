@@ -45,6 +45,7 @@ body{
 }
 .info{
     border: 1px #FFF solid;
+    border-bottom: none;
     padding: 10px 20px;
 }
 .info h2{
@@ -52,7 +53,7 @@ body{
 }
 .menu{
     width: 300px;
-    height: 100%;
+    min-height: 600px;
     border: 1px #FFF solid;
     float: left;
     margin-top:20px;
@@ -76,7 +77,7 @@ body{
 .menu ul li{
     margin: 0;
     border: 1px #FFF solid;
-    padding-left: 40px;
+    padding-left: 50px;
     min-height: 30px;
     line-height: 30px;
 
@@ -96,7 +97,7 @@ li{
 }
 .latest h1{
     margin: 0;
-    margin-top: 10px;
+    margin-top: 20px;
     padding: 0;
     width: 100%;
     text-align: center;
