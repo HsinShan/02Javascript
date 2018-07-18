@@ -116,7 +116,36 @@
             var opag=onum.getElementsByTagName("div");
             var page=1;//紀錄頁數
 
+            for(var l=0;l<opag.length;l++){
+                opag[l].ind=l;
+                opag[l].onclick=function(){
+                    page=this.ind+1;
+                    for(var z=0;z<opag.length;z++){
+                        opag[z].className="";
+                    }
+                    opag[page-1].className="active1";
+                    switch(page){
+                        case 1:
+                            ola.src="1-wtc-america-architecture-374710.jpg";
+                            ola.alt="華爾街";
+                            odesc.innerHTML="Netflix財報結果低於預期 美股漲跌不一";
+                            break;
+                        case 2:
+                            ola.src="airport-bank-board-534216.jpg";
+                            ola.alt="股市";
+                            odesc.innerHTML="倫敦股市分析";
+                            opag.innerHTML="第2頁/共3頁";
+                            break;
+                        case 3:
+                            ola.src="administration-articles-bank-261949.jpg";
+                            ola.alt="經濟";
+                            odesc.innerHTML="雙普會今日登場 影響力有限";
+                            opag.innerHTML="第3頁/共3頁";
+                            break; 
+                    }
 
+                }
+            }
             opre.onclick=function(){
                 opag[page-1].className="";
                 if(page!=1){
