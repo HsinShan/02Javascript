@@ -3,3 +3,4 @@
 #### 1.Guess Number→Demo網址: http://htmlpreview.github.io/?https://github.com/HsinShan/02Javascript/blob/master/guessNumber.html
 #### 2.AutoTable→Demo網址: http://htmlpreview.github.io/?https://github.com/HsinShan/02Javascript/blob/master/autoTable.html
 #### 3.金融搜捕手→Demo網址: http://htmlpreview.github.io/?https://github.com/HsinShan/02Javascript/blob/master/financialnews.html
+#### 4.MGUS Analysis→Demo網址: http://htmlpreview.github.io/?https://github.com/HsinShan/02Javascript/blob/master/MGUSanalysis.html
