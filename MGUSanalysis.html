@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <link rel="stylesheet" type="text/css" href="analysisStyle.css">
+        <link href="https://fonts.googleapis.com/css?family=Galada|PT+Sans" rel="stylesheet">
+        <title>MGUS Analysis</title>
+    </head>
+
+    <body>
+        <div class="title">
+            <h1>MGUS Analysis</h1>
+        </div>
+        <div class="content">
+            <div class="menu">
+                <a class="active" href="#">MGUS介紹</a>
+                <a href="#">分析資料</a>
+                <a href="#">初步分析</a>
+                <a href="#">探討問題</a>
+
+                <ul class="active1">
+                    <li><i>意義不明單株伽瑪球蛋白症(monoclonal gammopathy of undeterminated significance; MGUS)，為非骨髓瘤之漿細胞惡液質疾病。</i></li>
+                    <li><i>由於MGUS是沒有症狀的，所以通常是偶然發現或是健檢時才會得知罹患此疾病。</i></li>
+                    <li> <i><b>非骨髓瘤之漿細胞惡液質疾病</b>: 泛指骨髓瘤以外也有因漿細胞增生而產生單株免疫球蛋白所產生的病症。包括意義不明單株伽瑪球蛋白症(monoclonal gammopathy of undeterminated significance; MGUS)，輕鏈蛋白相關之類澱粉沉積症(light-chain related amyloidosis)，冷凝球蛋白血症(cryoglobulinemia)和免疫球蛋白巨鏈病(heavy chain disease)等等。疾病資料源自:http://www.tmmrr.com/about.asp?in=236</i></li>
+                </ul>
+                <ul>
+                    <li><i>源自http://vincentarelbundock.github.io/Rdatasets/datasets.html
+                        網站中的資料，package為survival，item為mgus2，title為Monoclonal gammapothy data的資料，總共有10個變數，1384筆資料</i></li>
+                    <li><i>變數名稱及意涵的對照表如下:</i><br><table>
+                        <tr>
+                            <td><i>變數名稱</i></td>
+                            <td><i>變數意涵</i></td>
+                        </tr>
+                        <tr>
+                            <td><i>id</i></td>
+                            <td><i>資料的編號</i></td>
+                        </tr>
+                        <tr>
+                            <td><i>age</i></td>
+                            <td><i>患者的年齡（單位：年）</i></td>
+                        </tr>
+                        <tr>
+                            <td><i>sex</i></td>
+                            <td><i>患者的性別（以F跟M表示)</i></td>
+                        </tr>
+                        <tr>
+                            <td><i>hgb</i></td>
+                            <td><i>「血紅蛋白」數值</i></td>
+                        </tr>
+                        <tr>
+                            <td><i>creat</i></td>
+                            <td><i>「肌酸酐」數值</i></td>
+                        </tr>
+                        <tr>
+                            <td><i>mspike</i></td>
+                            <td><i>「單克隆血清峰值」數值</i></td>
+                        </tr>
+                        <tr>
+                            <td><i>ptime</i></td>
+                            <td><i>確診到發展成惡性腫瘤的時間（單位：月）</i></td>
+                        </tr>
+                        <tr>
+                            <td><i>pstat</i></td>
+                            <td><i>是否發生惡性腫瘤（以0跟1表示）</i></td>
+                        </tr>
+                        <tr>
+                            <td><i>futime</i></td>
+                            <td><i>確診到死亡的時間（單位：月）</i></td>
+                        </tr>
+                        <tr>
+                            <td><i>death</i></td>
+                            <td><i>是否死亡（以0跟1表示）</i></td>
+                        </tr>
+                        </table></li>
+                </ul>
+
+
+                <ul>
+                    <li><i>透過各種關係圖分析各個變數間的關係</i></li>
+                    <li><i>1.罹患MGUS的女性血紅蛋白的數值比較低，而且大多集中在12~15；男性則較分散在11~17之間</i></li>
+                    <li><i>2.年齡在70~80歲的MGUS患者死亡率較高</i></li>
+                    <li><i>3.罹患MGUS的男性的死亡率比較高，高達7成</i></li>
+                    <li><i>4.患有MGUS的病患有可能會轉化成真的惡性腫瘤的機率其實並不高，1384人中只有115人轉換為惡性腫瘤，機率為8.3%</i></li>
+                    <li><i>5.有惡性腫瘤的人死亡率高達90%，遠比無惡性腫瘤多出約20%</i></li>
+                    <li><i>6.不論有無發展成惡性腫瘤，罹患MGUS的病患在確診後100個月內的死亡率很高</i></li>
+
+                </ul>
+                <ul>
+                    <li><i>根據初步分析的結果，影響MGUS的死亡率可能因素為年齡及性別，男性及年齡在70~80歲間的病患死亡率會較高。另外，也可以看出MGUS發展成惡性腫瘤的機率並不大，但若發展成惡性腫瘤，死亡率將大幅提升至9成。</i></li>
+                    <li><i>此外，不論有無發展成惡性腫瘤，罹患MGUS的病患在確診後100個月內的死亡率很高，我們認為這可能跟MGUS無症狀的因素有關，因為通常要等到健檢時才會察覺罹患此病，而導致病情被拖延。因此認為應加強對發展成惡性腫瘤的檢測，也在下方的第3點進行是否發展為惡性腫瘤的預測，希望透過各種預測方式，讓惡性腫瘤能過更準確且更早被發現。</i></li>
+                    <li><i>1.影響MGUS死亡率的可能因素</i></li>
+                    <li><i>2.MGUS轉化為惡性腫瘤的機率及預測</i></li>
+                </ul>
+            </div>
+            <div class="result">
+                <h2><i>分析結果</i></h2>
+                <p><b><i>1.分群觀察資料</i></b><i>:主要用到Clustering和PCA兩個分析方法，可看出MGUS的死亡率和年齡、性別、確診罹患MGUS到發展成惡行腫瘤的時間，以及確診罹患MGUS到死亡之間的時間有很大的關係，因為從以上兩種方法中，這幾個變數都為主要的區分方式，權重都也佔的比較大</i></p>
+                <p><b><i>2.預測</i></b><i>:根據初步分析資料結果及分群觀察資料，可得知MGUS發展成惡性腫瘤後的死亡率會大幅提升，為了讓惡性腫瘤能過更準確且更早被發現，因此個別使用kNN、Tree、SVM和Logistic Regression這四種演算法，來預測病患是否為發展為惡性腫瘤。</i><br><i>Evaluation Results和ROC curve顯示出Logistic Regression預測的準確度較高，但由於惡性腫瘤預測應大幅降低有腫瘤但未被檢測出來的機率，因此需選擇FP機率最小的方法。因此我們藉由此4種方法個別的Confusion Matrix，來找出FP機率最小的方法。<br>比較此四種方法的Confusion Matrix，可看出Logistic Regression預測的FP發生機率最小(0.08%)，且準確度最高，因此選用Logistic Regression是最佳的預測方式。 </i></p>
+                <h2><i>結論</i></h2>
+                <p><i>1.影響MGUS死亡率的可能因素：性別、年齡、確診罹患MGUS到發展成惡行腫瘤的時間、確診罹患MGUS到死亡之間的時間</i></p>
+                <p><i>2.MGUS轉化為惡性腫瘤的機率及預測機率不算太高（約8.7%），最佳預測方式為Logistic Regression</i>
+                </p>
+            </div>
+            <div class="search">
+                <label for="searchvalue">搜尋內文的關鍵字:</label>
+                <input type="text" id="searchvalue"><br>
+                <input type="button" id="bt" value="搜尋" >
+            </div>
+            <div class="copyright">
+                <p>此分析資料由於資料筆數不多，因此僅供參考，詳細疾病內容敬請諮詢專業醫師。</p>
+                <p>分析內容源自於Shirley，聯絡方式請上<a href="https://growingcrab.wordpress.com">GrowingCrab</a></p>
+            </div>
+
+        </div>
+        <script>
+            var omenu=document.getElementsByClassName("menu")[0];
+            var oa=omenu.getElementsByTagName("a");
+            var oul=omenu.getElementsByTagName("ul");
+            var actindex=0;
+            for(var i=0;i<oa.length;i++){
+                oa[i].index=i;
+                oa[i].onclick=function(){
+                    oa[actindex].className="";
+                    oul[actindex].className="";
+                    this.className="active";
+                    actindex=this.index;
+                    oul[actindex].className="active1";
+
+                }
+            }
+            var osv=document.getElementById("searchvalue");
+            var obt=document.getElementById("bt");
+            var ores=document.getElementsByClassName("result")[0];
+            var ocontent=[];//放原本的內文
+            var ofont=document.getElementsByTagName("i");
+            for(var i=0;i<ofont.length;i++){
+                ocontent[i]=ofont[i].innerHTML+"";
+            }
+            obt.onclick=function(){
+                var str1="<span>"+osv.value+"</span>";
+                for(var j=0;j<ocontent.length;j++){
+                    var orr=ocontent[j].split(osv.value);
+                    if(orr.length>1){
+                        ofont[j].innerHTML=orr.join(str1);
+                    }else{
+                        ofont[j].innerHTML=orr.join("");
+                    }
+                }
+            }
+        </script>
+
+    </body>
+</html>
