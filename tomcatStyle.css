@@ -1,0 +1,23 @@
+#tomcat{
+    width: 300px;
+    margin: auto;
+    position: relative;
+}
+#cat {
+    width: 300px;
+    
+}
+#tomcat p{
+    margin: 0;
+    position: absolute;
+    width: 100%;
+    bottom: 5px;
+}
+#tomcat p .im1{
+    margin-left: 10px;
+    display: inline-block;
+}
+#tomcat p .im2{
+    margin-left: 155px;
+    display: inline-block;
+}
