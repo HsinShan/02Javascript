@@ -15,10 +15,14 @@
                 var ocat=$("cat");
                 var op=document.getElementsByTagName("p")[0];
                 var obt=op.getElementsByTagName("img");
-                var isclick=0;
-                var action=[ "cymbal","drink","eat","fart","pie","scratch"];
-                var actionphoto=[12,80,39,27,23,55];
-                startTimer("angry",25);
+                var isclick=0;//存被點到的動作的index
+                //用list存就不用用switch來判斷
+                var action=[ "cymbal","drink","eat","fart","pie","scratch"];//動作名稱
+                var actionphoto=[12,80,39,27,23,55];//每種動作的照片張數
+                
+                startTimer("angry",25);//一開始未執行任何動作時，做生氣的動作
+                
+                //定時期開始，str代表動作名稱，num代表照片張數
                 function startTimer(str,num){
                     if(timer==null){
                         timer=setInterval(function(){
@@ -26,13 +30,13 @@
                             if(index==num){
                                 index=0;
                             }
-                            console.log(index);
                             ocat.src="動畫照片/"+str+"/"+str+"_"+format(index,num)+".jpg";
                         },90);
 
                     }
                 }
-
+                
+                //將數字0轉換成00
                 function format(i,n1){
                     var istr=i.toString();//把index轉換成string勘是幾位數
                     var n1str=n1.toString();//把num轉換成string勘是幾位數
@@ -46,72 +50,18 @@
                     clearInterval(timer);
                     timer=null;
                 }
+                //點擊事件
                 for(var j=0;j<obt.length;j++){
                     obt[j].serial=j;
-                    var actstring="";
-                    var actphoto=0;
                     obt[j].onclick=function(){
                         index=0;
                         stopTimer();
                         isclick=this.serial;
-                        actstring=action[isclick];
-                        actphoto=actionphoto[isclick];
-                        console.log(actstring);
-                        startTimer(actstring,actphoto);
+                        startTimer(action[isclick],actionphoto[isclick]);
                     }
 
                 }
-                //可以用list存就好
-                function act(n){
-                    var actstr="";
-                    switch(n){
-                        case 1:
-                            actstr="cymbal";
-                            break;
-                        case 2:
-                            actstr="drink";
-                            break;
-                        case 3:
-                            actstr="eat";
-                            break;
-                        case 4:
-                            actstr="fart";
-                            break;
-                        case 5:
-                            actstr="pie";
-                            break;
-                        case 6:
-                            actstr="scratch";
-                            break;
-                    }
-                    return actstr;
-                }
-                function photo(n1){
-                    var num=0;
-                    switch(n1){
-                        case 1:
-                            num=12;
-                            break;
-                        case 2:
-                            num=80;
-                            break;
-                        case 3:
-                            num=39;
-                            break;
-                        case 4:
-                            num=27;
-                            break;
-                        case 5:
-                            num=23;
-                            break;
-                        case 6:
-                            num=55;
-                            break;
-                    }
-                    return num;
-                }
-
-            })
+       
         </script>
 
 
